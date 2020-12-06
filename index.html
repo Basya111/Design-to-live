@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design to live</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+    <div class="modal" hidden>
+        <button class="close-btn" onclick="closeModal()">X</button>
+        <h2>Join us to get access to the latest stories!</h2>
+        <input class="modal-email" name="modal-email" type="email" placeholder="email@example.com">
+        <button class="modal-btn" onclick="closeModal()">Submit</button>
+    </div>
+
+    <header class="main-header">
+        <div class="main-layout flex space-between align-center">
+            <div class="logo">Blogin<span class="dot">.</span></div>
+    
+            <div class="main-nav flex">
+                <button class="close-btn" onclick="toggleMenu()">X</button>
+                <button class="journal-btn" onclick="toggleJournal()"><a href="#">Journal</a></button>
+                <button><a href="#">About</a></button>
+                <button><a href="#">Work</a></button>
+                <button><a href="#">Contact</a></button>
+            </div>
+
+            
+            
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            
+            <ul class="journal-menu clean-list">
+                <li>October 2016</li>
+                <li>January 2017</li>
+                <li>April 2017</li>
+                <li>July 2017</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="cards-container main-layout">
+        <div class="card">
+            <img src="img/road.png" alt="">
+            <div class="img-desc space-between">
+                <h2>Duis aute irure dolor in 
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p> Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur...</p>
+                <button class="btn-round" onclick="openModal()">Continue Reading</button>
+            </div>
+
+
+        </div>
+
+        <div class="card">
+            <img src="img/vue.png" alt="">
+            <div class="img-desc">
+                <h2>Duis aute irure dolor in 
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                     <p>Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur...</p>
+                <button class="btn-round">Continue Reading</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <img src="img/weet.png" alt="">
+            <div class="img-desc">
+                <h2>Duis aute irure dolor in 
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                    <p> Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur...</p>
+                <button class="btn-round">Continue Reading</button>
+            </div>
+        </div>
+
+        <!-- <div class="line"></div> -->
+        <div class="pages">
+                <ul class="list-pages clean-list">
+                    <li><a href="#">← Previous</a></li>
+                    <li><a href="#">Next →</a></li>
+                </ul>
+            </div>
+
+        </main>
+        
+        <footer class="my-footer">
+            <div class="logo">Blogin<span class="dot">.</span></div>
+            <small class="small-letters">© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at Pixelhint.com</small>
+            <div class="social-container">
+                <ul class="icons clean-list">
+                    <li><a href="#"><img class="img-icon" src="img/F.png" alt=""></a></li>
+                    <li><a href="#"><img class="img-icon" src="img/L.png" alt=""></a></li>
+                    <li><a href="#"><img class="img-icon" src="img/E.png" alt=""></a></li>
+                    <li><a href="#"><img class="img-icon" src="img/D.png" alt=""></a></li>
+                </ul>
+            </div>
+
+        </footer>
+<script>
+    function toggleMenu(){
+        document.body.classList.toggle('open-menu');
+    }
+
+    function openModal(){
+        document.querySelector('.modal').hidden = false;
+    }
+
+    function closeModal(){
+        document.querySelector('.modal').hidden = true;
+        document.querySelector('input[name=modal-email]').value = '';
+    }
+
+    function toggleJournal(){
+        document.body.classList.toggle('open-journal');
+    }
+</script>
+    
+</body>
+</html>
